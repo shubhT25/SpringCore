@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="employee1" class="com.core.employee.Employee">
+        <property name="eid" value="25" />
+        <property name="ename" value="Shubham" />
+        <property name="esalary" value="40000" />
+        <property name="eaddress" value="Wakad, Pune 411057"/>
+    </bean>
+    <bean name="again, employee2" class="com.core.employee.Employee">
+        <property name="eid" value="24" />
+        <property name="ename" value="Kaustubh" />
+        <property name="esalary" value="50000" />
+        <property name="eaddress" value="Viman nagar, Pune 411057"/>
+    </bean>
+    <alias name="employee1" alias="first"/>
+</beans>
