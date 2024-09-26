@@ -5,5 +5,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="helloBean" class="com.spring.beans.HelloBean"/>
+    <bean id="helloBeanFactory" class="com.spring.beans.HelloBeanFactory"/>
+    <bean id="helloBean" class="com.spring.beans.HelloBean" factory-method="getInstance" init-method="init" destroy-method="destroy">
+<!--        <property name="name" value="Shubham"/>-->
+<!--        <property name="message" value="Good Morning!"/>-->
+    </bean>
 </beans>
