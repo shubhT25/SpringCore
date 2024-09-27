@@ -19,6 +19,9 @@ public class WelcomeBean {
         this.message = message;
     }
 
+    public void init() {
+        System.out.println("Welcome init()");
+    }
     public String sayWelcome(){
         return "Welcome " + name + ", " + message;
     }

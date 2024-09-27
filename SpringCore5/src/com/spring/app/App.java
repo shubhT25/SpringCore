@@ -10,9 +10,6 @@ public class App {
 
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/spring/resource/applicationContext.xml");
         HelloBean hb1 = (HelloBean) context.getBean("helloBean");
-//        HelloBean hb2 = (HelloBean) context.getBean("helloBean");
-//        System.out.println(hb1);
-//        System.out.println(hb2);
         System.out.println(hb1.sayHello());
         context.close();
     }

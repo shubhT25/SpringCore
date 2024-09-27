@@ -22,4 +22,9 @@ public class HelloBean {
     public String sayHello() {
         return "Hello " + name + ", " + message;
     }
+
+    public void init(){
+        name="Shubham";
+        System.out.println("Hello init");
+    }
 }

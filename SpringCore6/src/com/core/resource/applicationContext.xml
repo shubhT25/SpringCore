@@ -5,8 +5,8 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="helloBean" class="com.core.beans.HelloBean">
-        <property name="name" value="Shubham"/>
+    <bean id="helloBean" class="com.core.beans.HelloBean" init-method="init">
+<!--        <property name="name" value="Shubham"/>-->
         <property name="message" value="How, Are You?" />
     </bean>
     <bean id="welcomeBean" class="com.core.beans.WelcomeBean" parent="helloBean">

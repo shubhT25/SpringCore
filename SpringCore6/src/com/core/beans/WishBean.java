@@ -18,7 +18,9 @@ public class WishBean {
     public void setMessage(String message) {
         this.message = message;
     }
-
+    public void init() {
+        System.out.println("Wish init()");
+    }
     public String sayWish(){
         return "Wishing " + name + ", " + message;
     }
