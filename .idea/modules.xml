@@ -5,8 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/SpringCore2/SpringCore2.iml" filepath="$PROJECT_DIR$/SpringCore2/SpringCore2.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore3/SpringCore3.iml" filepath="$PROJECT_DIR$/SpringCore3/SpringCore3.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore4/SpringCore4.iml" filepath="$PROJECT_DIR$/SpringCore4/SpringCore4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringCore5.iml" filepath="$PROJECT_DIR$/SpringCore5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringCore6.iml" filepath="$PROJECT_DIR$/SpringCore6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCore5/SpringCore5.iml" filepath="$PROJECT_DIR$/SpringCore5/SpringCore5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCore6/SpringCore6.iml" filepath="$PROJECT_DIR$/SpringCore6/SpringCore6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCore7/SpringCore7.iml" filepath="$PROJECT_DIR$/SpringCore7/SpringCore7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCore8/SpringCore8.iml" filepath="$PROJECT_DIR$/SpringCore8/SpringCore8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCore9/SpringCore9.iml" filepath="$PROJECT_DIR$/SpringCore9/SpringCore9.iml" />
     </modules>
   </component>
 </project>
