@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="branche" class="com.spring.beans.Branch" autowire-candidate="false">
+        <property name="bname" value="Computer" />
+<!--        <property name="student" ref="studentBean" />-->
+    </bean>
+    <bean id="branch" class="com.spring.beans.Branch">
+        <property name="bname" value="Computer" />
+        <!--        <property name="student" ref="studentBean" />-->
+    </bean>
+    <bean id="studentBean" class="com.spring.beans.Student" autowire="byType">
+        <property name="sname" value="Shubham" />
+<!--        <property name="branch" ref="branchBean" />-->
+    </bean>
+</beans>
