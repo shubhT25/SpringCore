@@ -73,11 +73,36 @@ public class StudentDaoImpl implements StudentDao{
 
     @Override
     public String update(Student student) {
-        return "";
+        try {
+            Connection conn = dataSource.getConnection();
+            PreparedStatement ps = conn.prepareStatement("update student set SNAME = ?, SADDR = ? where SID = ?");
+            ps.setString(1, student.getSname());
+            ps.setString(2, student.getSaddr());
+            ps.setString(3, student.getSid());
+            int rowCount = ps.executeUpdate();
+            if(rowCount == 1) {
+                return "Success";
+            }
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return "Failed";
     }
 
     @Override
     public String delete(String sid) {
-        return "";
+        try {
+            Connection conn = dataSource.getConnection();
+            PreparedStatement ps = conn.prepareStatement("delete from Student where SID=?");
+            ps.setString(1, sid);
+            int rowCount = ps.executeUpdate();
+            if(rowCount == 1) {
+                return "Success";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "Failed";
     }
 }

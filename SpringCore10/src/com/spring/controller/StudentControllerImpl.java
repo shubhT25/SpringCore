@@ -5,11 +5,13 @@ import com.spring.dao.StudentDaoImpl;
 import com.spring.dto.Student;
 import com.spring.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.support.SimpleTriggerContext;
 import org.springframework.stereotype.Controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Objects;
 
 @Controller("studentController")
 public class StudentControllerImpl implements StudentController{
@@ -80,12 +82,56 @@ public class StudentControllerImpl implements StudentController{
     }
 
     @Override
-    public void updateStudent(Student student) {
+    public void updateStudent() {
+        try{
+            System.out.println("Enter Student ID: ");
+            String sid = br.readLine();
+            Student student = studentService.searchStudent(sid);
+            if(student == null) {
+                System.out.println("Student Id not exist");
+            } else {
+                System.out.println("Student Old Name: " + student.getSname() + " New Name: ");
+                String sname = br.readLine();
+                System.out.println("Student Old Address: " + student.getSname() + " New Address: ");
+                String saddress = br.readLine();
+                Student updatedStudent = new Student();
+                updatedStudent.setSid(sid);
+                updatedStudent.setSname(sname);
+                updatedStudent.setSaddr(saddress);
+                String res = studentService.updateStudent(updatedStudent);
+                if(Objects.equals(res, "Success")) {
+                    System.out.println("Student Successfully Updated");
+                } else {
+                    System.out.println("Operation Failed");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
-    public void deleteStudent(String sid) {
+    public void deleteStudent() {
+        try{
+            System.out.println("Enter Student Id: ");
+            String sid = br.readLine();
+            Student student = studentService.searchStudent(sid);
+            if(student == null) {
+                System.out.println("Student does not exist");
+            } else {
+                String res = studentService.deleteStudent(sid);
+                if(res == "Success") {
+                    System.out.println("Record deleted Succesfully");
+                } else {
+                    System.out.println("Operation Failed");
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
+
 }

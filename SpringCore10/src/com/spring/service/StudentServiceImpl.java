@@ -28,11 +28,11 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public String updateStudent(Student student) {
-        return "";
+        return studentDao.update(student);
     }
 
     @Override
     public String deleteStudent(String sid) {
-        return "";
+        return studentDao.delete(sid);
     }
 }

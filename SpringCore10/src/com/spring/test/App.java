@@ -29,8 +29,10 @@ public class App {
                     studentController.searchStudent();
                     break;
                 case 3:
+                    studentController.updateStudent();
                     break;
                 case 4:
+                    studentController.deleteStudent();
                     break;
                 case 5:
                     System.out.println("Thank you for using the application");

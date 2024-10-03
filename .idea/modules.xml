@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algo/Algo.iml" filepath="$PROJECT_DIR$/Algo/Algo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore10/SpringCore10.iml" filepath="$PROJECT_DIR$/SpringCore10/SpringCore10.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore2/SpringCore2.iml" filepath="$PROJECT_DIR$/SpringCore2/SpringCore2.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore3/SpringCore3.iml" filepath="$PROJECT_DIR$/SpringCore3/SpringCore3.iml" />
