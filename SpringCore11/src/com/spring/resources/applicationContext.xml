@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="employee" class="com.spring.beans.Employee" />
+    <bean id="savings" class="com.spring.beans.SavingsAccount" >
+        <property name="name" value="" />
+    </bean>
+    <bean id="current" class="com.spring.beans.CurrentAccount" />
+    <bean id="savingsFactory" class="com.spring.factory.FactoryAccount">
+        <lookup-method name="getAccount" bean="savings" />
+    </bean>
+    <bean id="currentFactory" class="com.spring.factory.FactoryAccount">
+        <lookup-method name="getAccount" bean="current" />
+    </bean>
+    <bean id="savingsValidator" class="com.spring.validator.SavingsValidator">
+        <property name="resource" value="com/spring/resources/errorMessages.properties"/>
+    </bean>
+</beans>

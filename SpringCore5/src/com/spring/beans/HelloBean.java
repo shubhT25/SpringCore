@@ -9,40 +9,39 @@ import javax.annotation.PreDestroy;
 public class HelloBean implements InitializingBean, DisposableBean {
     private String name, message;
 
+    static {
+        System.out.println("HelloBean Class Loading");
+    }
+
+    public HelloBean() {
+        System.out.println("HelloBean Class Instantiate");
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        System.out.println("In setName function");
+        System.out.println("Setting Name");
         this.name = name;
     }
 
     public String getMessage() {
-        System.out.println("In getName function");
         return message;
     }
 
     public void setMessage(String message) {
-        System.out.println("In setMessage function");
+        System.out.println("Setting message");
         this.message = message;
     }
 
-    static {
-        System.out.println("HelloBean Class Loading");
-    }
-    public HelloBean() {
-        System.out.println("HelloBean Class Instantiate");
-    }
-    public void init() {
-        System.out.println("Intialize method");
+    public void initCustom() {
+        System.out.println("Custom initialize method");
         name = "Kaustubh";
         message = "Good Afternoon!";
     }
     public void destroyCustom() {
         System.out.println("Custom delete method");
-        name = "";
-        message = "";
     }
     public String sayHello(){
         return "Hello " + this.name + " " + this.message;
@@ -56,22 +55,22 @@ public class HelloBean implements InitializingBean, DisposableBean {
     public void afterPropertiesSet() throws Exception {
         name = "Arjun";
         message = "Good Evening!";
-        System.out.println("In afterPropertieSet");
+        System.out.println("afterPropertiesSet Method");
     }
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("In destroy");
+        System.out.println("Destroy method from Disposable Bean");
     }
 
     @PostConstruct
     public void intialize(){
-        System.out.println("In PostContruct Init");
+        System.out.println("Init method by PostConstruct Annotation");
     }
 
     @PreDestroy
     public void preDestroy() {
-        System.out.println("In PreDestroy destroy");
+        System.out.println("Destroy method by PreDestroy Annotation");
     }
 }
 

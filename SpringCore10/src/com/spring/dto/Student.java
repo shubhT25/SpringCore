@@ -2,6 +2,8 @@ package com.spring.dto;
 
 public class Student {
     private String sid;
+    private String sname;
+    private String saddr;
 
     public String getSid() {
         return sid;
@@ -26,8 +28,5 @@ public class Student {
     public void setSaddr(String saddr) {
         this.saddr = saddr;
     }
-
-    private String sname;
-    private String saddr;
 
 }

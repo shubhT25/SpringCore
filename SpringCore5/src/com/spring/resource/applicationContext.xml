@@ -10,7 +10,7 @@
     <!-- bean definitions here -->
     <context:annotation-config/>
 <!--    <bean id="helloBeanFactory" class="com.spring.beans.HelloBeanFactory"/>-->
-    <bean id="helloBean" class="com.spring.beans.HelloBean" factory-method="getInstance" init-method="init" destroy-method="destroyCustom">
+    <bean id="helloBean" class="com.spring.beans.HelloBean" factory-method="getInstance" init-method="initCustom" destroy-method="destroyCustom">
         <property name="name" value="Shubham"/>
         <property name="message" value="Good Morning!"/>
     </bean>

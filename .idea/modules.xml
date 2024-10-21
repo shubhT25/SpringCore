@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Algo/Algo.iml" filepath="$PROJECT_DIR$/Algo/Algo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore10/SpringCore10.iml" filepath="$PROJECT_DIR$/SpringCore10/SpringCore10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCore11/SpringCore11.iml" filepath="$PROJECT_DIR$/SpringCore11/SpringCore11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algo/SpringCore12/SpringCore12.iml" filepath="$PROJECT_DIR$/Algo/SpringCore12/SpringCore12.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore2/SpringCore2.iml" filepath="$PROJECT_DIR$/SpringCore2/SpringCore2.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore3/SpringCore3.iml" filepath="$PROJECT_DIR$/SpringCore3/SpringCore3.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCore4/SpringCore4.iml" filepath="$PROJECT_DIR$/SpringCore4/SpringCore4.iml" />

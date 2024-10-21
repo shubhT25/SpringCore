@@ -1,8 +1,10 @@
 package com.spring.test;
 
+import com.spring.config.SpringConfig;
 import com.spring.controller.StudentController;
 import oracle.jdbc.pool.OracleDataSource;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.BufferedReader;
@@ -10,7 +12,8 @@ import java.io.InputStreamReader;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/resources/applicationContext.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+//        ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/resources/applicationContext.xml");
         StudentController studentController = (StudentController) context.getBean("studentController");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         while(true) {

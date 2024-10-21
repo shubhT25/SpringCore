@@ -37,7 +37,7 @@ public class StudentControllerImpl implements StudentController{
             String sid = br.readLine();
             System.out.println("Student Name: ");
             String sname = br.readLine();
-            System.out.println("Student Address");
+            System.out.println("Student Address: ");
             String saddr = br.readLine();
 
             Student std = new Student();
@@ -47,9 +47,9 @@ public class StudentControllerImpl implements StudentController{
 
             String status = studentService.addStudent(std);
             if (status.equals("existed")) {
-                System.out.println("Account already exist with given ID");
+                System.out.println("Student already exist with given ID");
             } else if (status.equals("success")) {
-                System.out.println("Account Created Successfully");
+                System.out.println("Student Created Successfully");
             } else {
                 System.out.println("System Failure");
             }

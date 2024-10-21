@@ -5,12 +5,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="branche" class="com.spring.beans.Branch" autowire-candidate="false">
+    <bean id="branch1" class="com.spring.beans.Branch" autowire-candidate="false">
         <property name="bname" value="Computer" />
 <!--        <property name="student" ref="studentBean" />-->
     </bean>
-    <bean id="branch" class="com.spring.beans.Branch">
-        <property name="bname" value="Computer" />
+    <bean id="branch2" class="com.spring.beans.Branch">
+        <property name="bname" value="Mech" />
         <!--        <property name="student" ref="studentBean" />-->
     </bean>
     <bean id="studentBean" class="com.spring.beans.Student" autowire="byType">

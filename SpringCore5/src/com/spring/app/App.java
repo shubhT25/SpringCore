@@ -7,10 +7,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
     public static void main(String[] args) {
-
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/spring/resource/applicationContext.xml");
         HelloBean hb1 = (HelloBean) context.getBean("helloBean");
+        System.out.println(hb1);
         System.out.println(hb1.sayHello());
         context.close();
+        System.out.println("Refreshing context");
+        context.refresh();
+        System.out.println(hb1.sayHello());
+        System.out.println(context.getBean("helloBean"));
     }
 }
