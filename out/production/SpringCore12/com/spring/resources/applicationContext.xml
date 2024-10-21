@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="courseBean" class="com.spring.beans.Course" scope="prototype">
+        <property name="cid" value="C11" />
+        <property name="cname" value="Java" />
+    </bean>
+    <bean id="courseBeanFactory" class="com.spring.factory.CourseFactory">
+        <lookup-method name="getCourseMethod" bean="courseBean"/>
+    </bean>
+    <bean id="applicationContext" class="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <bean id="courseBeanMethodReplacer" class="com.spring.replacer.CourseBeanMethodReplacer">
+        <property name="applicationContext" ref="applicationContext" />
+    </bean>
+    <bean id="studentBean" class="com.spring.beans.Student">
+        <property name="sid" value="S11"/>
+        <property name="sname" value="Shubham"/>
+        <property name="courseFactory" ref="courseBeanFactory" />
+        <replaced-method name="getCourse" replacer="courseBeanMethodReplacer" />
+    </bean>
+</beans>
